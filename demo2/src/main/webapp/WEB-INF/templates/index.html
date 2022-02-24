@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+     <h1 style="color: red">首页</h1>
+     <a th:href="@{/hello/testRequestMapping}">测试RequestMapping注解的位置-->testRequestMapping</a>
+     </br>
+     <a th:href="@{hello/test}">测试RequestMapping的注解位置-->test</a>
+     <br>
+     <a th:href="@{hello/test}">测试RequestMapping注解的method属性->Get</a>
+     <br>
+     <form th:action="@{hello/test}" method="Post">
+         <input type="submit"  value="测试RequestMapping解的method属性->Post" />
+     </form>
+
+     <br>
+     <a th:href="@{hello/testGetMapping}">测试GetMapping注解</a>
+
+     <br>
+     <a th:href="@{/hello/testRequestMapping(username='admin',password=12345)}">测试RequestMapping的params属性</a>
+<br>
+     <a th:href="@{/hello/a1a(username='admin',password=12345)}">SpringMVC支持ant风格的路径</a>
+<br>
+     <a th:href="@{/hello/testPath/1/admin}">SpringMVC支持路径中的占位符</a>
+</body>
+</html>

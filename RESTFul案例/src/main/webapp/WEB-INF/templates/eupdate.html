@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form th:action="@{/employee}" method="post">
+    <input type="hidden" name="_method" value="put">
+    <input type="hidden" name="id" th:value="${employee.id}">
+    lastName:<input type="text" name="lastName" th:value="${employee.lastName}"><br>
+    emial :<input type="text" name="emial" th:value="${employee.emial}"><br>
+    gender :<input type="radio" name="gender" th:value="">男
+    <input type="radio" name="gender" value="女">女
+    <input type="radio" name="gender" value="外星人">外星人
+    <input type="radio" name="gender" value="变性人">变性人
+    <input type="radio" name="gender" value="阴阳人">阴阳人<br>
+
+    <input type="submit" value="update">
+</form>
+</body>
+</html>
